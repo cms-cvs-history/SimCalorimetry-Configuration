@@ -1,27 +1,17 @@
 
    # Digitization of Ecal and Hcal
 
-   # NOTE : Both Ecal and Hcal geometries need to be present,
-   #        even if only one digitizers is to run, and they're
-   #        both included in the CaloGeometry.cfi
+   # This is the sequence that runs unsuppressed Ecal digis 
+   # + zero-suppression in the Ecal+PreShower
    #
-   include "Geometry/CaloEventSetup/data/CaloGeometry.cfi"
-#
-# This cfi should be included to make the CaloTowersConstituentsMap
-# I don't know if it's needed for unsuppressed digi's or at for zero-sup 
-# 
-   include "Geometry/CaloEventSetup/data/EcalTrigTowerConstituents.cfi"
- 
-   # use trivial ESProducer for tests
-   #
-   include "CalibCalorimetry/EcalTrivialCondModules/data/EcalTrivialCondRetriever.cfi"
+   # Note : this cff includes setup for both Ecal&Hcal geom.services
+   #        (Geometry/CaloEventSetup/data/CaloGeometry.cfi) that
+   #        are *both* needed, even if only one digitizer is to run 
+   #   
+   include "SimCalorimetry/EcalSimProducers/data/ecalDigiSequence.cff"
 
    include "CalibCalorimetry/HcalPlugins/data/hardwired_conditions.cfi"
-
-   # unsuppressed digi's
-   #
-   include "SimCalorimetry/EcalSimProducers/data/ecaldigi.cfi"
    
    include "SimCalorimetry/HcalSimProducers/data/hcaldigi.cfi"
    
-   sequence calDigi = { ecalUnsuppressedDigis & hcalDigis }
+   sequence calDigi = { ecalDigiSequence & hcalDigis }
