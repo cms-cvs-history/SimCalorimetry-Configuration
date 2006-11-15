@@ -1,0 +1,22 @@
+#Full Event content 
+block SimCalorimetryFEVT = {
+  untracked vstring outputCommands = {
+	#save digis, but not ECAL Unsuppressed ones
+	"keep *_ecalDigis_*_*",
+	"keep *_ecalPreshowerDigis_*_*",
+	"keep *_hcalDigis_*_*"
+	
+  }		
+}	
+
+#RECO content
+block SimCalorimetryRECO = {
+  untracked vstring outputCommands = {
+  }		
+}	
+
+#AOD content
+block SimCalorimetryAOD = {
+  untracked vstring outputCommands = {
+  }		
+}	
