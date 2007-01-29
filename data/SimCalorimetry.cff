@@ -9,8 +9,10 @@
    #        are *both* needed, even if only one digitizer is to run 
    #   
    include "SimCalorimetry/EcalSimProducers/data/ecalDigiSequence.cff"
-
-   include "CalibCalorimetry/HcalPlugins/data/hardwired_conditions.cfi"
+#
+# changed by tommaso. now the calibrations are read from Configuration/StaqndardSequences/data/*Conditions.cff
+#
+#  include "CalibCalorimetry/HcalPlugins/data/hardwired_conditions.cfi"
    
    include "SimCalorimetry/HcalSimProducers/data/hcaldigi.cfi"
    
