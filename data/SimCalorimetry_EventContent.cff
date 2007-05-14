@@ -4,6 +4,7 @@ block SimCalorimetryFEVT = {
 	#save digis, but not ECAL Unsuppressed ones
 	"keep *_ecalDigis_*_*",
 	"keep *_ecalPreshowerDigis_*_*",
+        "keep *_ecalTriggerPrimitiveDigis_*_*",
 	"keep *_hcalDigis_*_*"
 	
   }		
