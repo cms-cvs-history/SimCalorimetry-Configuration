@@ -5,7 +5,8 @@ block SimCalorimetryFEVT = {
 	"keep *_ecalDigis_*_*",
 	"keep *_ecalPreshowerDigis_*_*",
         "keep *_ecalTriggerPrimitiveDigis_*_*",
-	"keep *_hcalDigis_*_*"
+	"keep *_hcalDigis_*_*",
+        "keep *_hcalTriggerPrimitiveDigis_*_*"
 	
   }		
 }	

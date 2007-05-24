@@ -15,5 +15,8 @@
 #  include "CalibCalorimetry/HcalPlugins/data/hardwired_conditions.cfi"
    
    include "SimCalorimetry/HcalSimProducers/data/hcaldigi.cfi"
-   
-   sequence calDigi = { ecalDigiSequence & hcalDigis }
+
+#  HCAL TPG
+
+   include "SimCalorimetry/HcalTrigPrimProducers/data/hcaltpdigi.cff"
+   sequence calDigi = { ecalDigiSequence & hcalDigis &  hcalTriggerPrimitiveDigis}    
