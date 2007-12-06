@@ -1,13 +1,9 @@
 #Full Event content 
 block SimCalorimetryFEVT = {
   untracked vstring outputCommands = {
-	#save digis, but not ECAL Unsuppressed ones
-	"keep *_ecalDigis_*_*",
-	"keep *_ecalPreshowerDigis_*_*",
+	#save trigger primitive digi
         "keep *_ecalTriggerPrimitiveDigis_*_*",
-	"keep *_hcalDigis_*_*",
         "keep *_hcalTriggerPrimitiveDigis_*_*"
-	
   }		
 }	
 
