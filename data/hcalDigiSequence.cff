@@ -1,0 +1,10 @@
+#  HCAL digitization
+
+   include "SimCalorimetry/HcalSimProducers/data/hcalUnsuppressedDigis.cfi"
+   include "SimCalorimetry/HcalZeroSuppressionProducers/data/hcalDigis.cfi"
+
+#  HCAL TPG
+
+   include "SimCalorimetry/HcalTrigPrimProducers/data/hcaltpdigi.cff"
+
+   sequence hcalDigiSequence = { hcalUnsuppressedDigis & hcalTriggerPrimitiveDigis & hcalDigis }

@@ -1,25 +1,8 @@
 
    # Digitization of Ecal and Hcal
 
-   # This is the sequence that runs unsuppressed Ecal digis 
-   # + zero-suppression in the Ecal+PreShower
-   #
-   # Note : this cff includes setup for both Ecal&Hcal geom.services
-   #        (Geometry/CaloEventSetup/data/CaloGeometry.cfi) that
-   #        are *both* needed, even if only one digitizer is to run 
-   #   
-   include "SimCalorimetry/EcalSimProducers/data/ecalDigiSequence.cff"
-#
-# changed by tommaso. now the calibrations are read from Configuration/StaqndardSequences/data/*Conditions.cff
-#
-#  include "CalibCalorimetry/HcalPlugins/data/hardwired_conditions.cfi"
+   include "SimCalorimetry/Configuration/data/ecalDigiSequence.cff"
    
-   include "SimCalorimetry/HcalSimProducers/data/hcalUnsuppressedDigis.cfi"
-   include "SimCalorimetry/HcalZeroSuppressionProducers/data/hcalDigis.cfi"
+   include "SimCalorimetry/Configuration/data/hcalDigiSequence.cff
 
-#  HCAL TPG
-
-   include "SimCalorimetry/HcalTrigPrimProducers/data/hcaltpdigi.cff"
-
-   sequence hcalDigiSequence = { hcalUnsuppressedDigis & hcalTriggerPrimitiveDigis & hcalDigis }
    sequence calDigi = { ecalDigiSequence & hcalDigiSequence }    
