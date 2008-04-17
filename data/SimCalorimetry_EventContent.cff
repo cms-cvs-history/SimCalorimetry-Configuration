@@ -2,8 +2,8 @@
 block SimCalorimetryFEVT = {
   untracked vstring outputCommands = {
 	#save trigger primitive digi and ecal SrFlags
-	"keep EBSrFlagsSorted_*_*_*",
-	"keep EESrFlagsSorted_*_*_*"
+	"keep EBSrFlagsSorted_ecalDigis_*_*",
+	"keep EESrFlagsSorted_ecalDigis_*_*"
         #"keep *_ecalTriggerPrimitiveDigis_*_*",
         #"keep *_hcalTriggerPrimitiveDigis_*_*"
   }		
