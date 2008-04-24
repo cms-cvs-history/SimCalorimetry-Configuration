@@ -23,6 +23,6 @@
   # Preshower Zero suppression producer
   include "SimCalorimetry/EcalZeroSuppressionProducers/data/ecalPreshowerDigis.cfi"
 
-  sequence ecalDigiSequenceComplete = { ecalUnsuppressedDigis, ecalTriggerPrimitiveDigis, ecalDigis, ecalPreshowerDigis }
+  sequence ecalDigiSequenceComplete = { simEcalUnsuppressedDigis, simEcalTriggerPrimitiveDigis, simEcalDigis, simEcalPreshowerDigis }
 
 

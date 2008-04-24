@@ -7,4 +7,4 @@
 
    include "SimCalorimetry/HcalTrigPrimProducers/data/hcaltpdigi.cff"
 
-   sequence hcalDigiSequence = { hcalUnsuppressedDigis & hcalTriggerPrimitiveDigis & hcalDigis }
+   sequence hcalDigiSequence = { simHcalUnsuppressedDigis & simHcalTriggerPrimitiveDigis & simHcalDigis }

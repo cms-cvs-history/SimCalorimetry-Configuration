@@ -9,7 +9,7 @@
 
   # unsuppressed digis simulation - fast preshower
   include "SimCalorimetry/EcalSimProducers/data/ecaldigi.cfi"
-  replace ecalUnsuppressedDigis.doFast = true
+  replace simEcalUnsuppressedDigis.doFast = true
 
   # ecal mapping
   include "Geometry/EcalMapping/data/EcalMapping.cfi"
@@ -23,8 +23,8 @@
 
   # Preshower Zero suppression producer
   include "SimCalorimetry/EcalZeroSuppressionProducers/data/ecalPreshowerDigis.cfi"
-   replace ecalPreshowerDigis.ESNoiseSigma = 2.98595 
+   replace simEcalPreshowerDigis.ESNoiseSigma = 2.98595 
 
-  sequence ecalDigiSequenceFast = { ecalUnsuppressedDigis, ecalTriggerPrimitiveDigis, ecalDigis, ecalPreshowerDigis }
+  sequence ecalDigiSequenceFast = { simEcalUnsuppressedDigis, simEcalTriggerPrimitiveDigis, simEcalDigis, simEcalPreshowerDigis }
 
 
