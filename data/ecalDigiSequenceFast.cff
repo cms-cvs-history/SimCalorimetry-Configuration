@@ -1,21 +1,8 @@
-
-  # Calo geometry service model
-  include "Geometry/CaloEventSetup/data/CaloGeometry.cff"
-  include "Geometry/CaloEventSetup/data/EcalTrigTowerConstituents.cfi"
-
-  # removed by tommaso
-  # use trivial ESProducer for tests
-  # include "CalibCalorimetry/EcalTrivialCondModules/data/EcalTrivialCondRetriever.cfi"
-
   # unsuppressed digis simulation - fast preshower
   include "SimCalorimetry/EcalSimProducers/data/ecaldigi.cfi"
   replace simEcalUnsuppressedDigis.doFast = true
 
-  # ecal mapping
-  include "Geometry/EcalMapping/data/EcalMapping.cfi"
-
-  # Trigger Primitives Generation producer
-  # not used in 0_8_0
+  # ECAL Trigger Primitives (needed by SRP)
   include "SimCalorimetry/EcalTrigPrimProducers/data/ecalTriggerPrimitiveDigis.cff"
 
   # Selective Readout Processor producer
@@ -23,7 +10,7 @@
 
   # Preshower Zero suppression producer
   include "SimCalorimetry/EcalZeroSuppressionProducers/data/ecalPreshowerDigis.cfi"
-   replace simEcalPreshowerDigis.ESNoiseSigma = 2.98595 
+  replace simEcalPreshowerDigis.ESNoiseSigma = 2.98595 
 
   sequence ecalDigiSequenceFast = { simEcalUnsuppressedDigis, simEcalTriggerPrimitiveDigis, simEcalDigis, simEcalPreshowerDigis }
 
