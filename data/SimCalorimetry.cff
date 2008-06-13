@@ -1,8 +1,0 @@
-
-   # Digitization of Ecal and Hcal
-
-   include "SimCalorimetry/Configuration/data/ecalDigiSequence.cff"
-   
-   include "SimCalorimetry/Configuration/data/hcalDigiSequence.cff"
-
-   sequence calDigi = { ecalDigiSequence & hcalDigiSequence }    
